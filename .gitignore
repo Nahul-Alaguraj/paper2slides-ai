@@ -1,0 +1,22 @@
+# -------------------------
+# Python (Backend)
+# -------------------------
+backend/__pycache__/
+backend/*.pyc
+backend/uploads/
+backend/generated_ppts/
+backend/.env
+
+# -------------------------
+# Node / Next.js (Frontend)
+# -------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# -------------------------
+# OS / Editor
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
