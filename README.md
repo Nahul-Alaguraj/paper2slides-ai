@@ -1,137 +1,133 @@
-**AI Paper-to-Slides Generator**
+#  AI Paper-to-Slides Generator
 
-An end-to-end AI system that converts academic research papers (PDFs) into presentation-ready PowerPoint slides using Large Language Models (LLMs).
+An end-to-end AI system that converts academic research papers (PDFs) into **presentation-ready PowerPoint slides** using Large Language Models (LLMs).
 
-Upload a research paper → AI extracts key ideas → generates structured slides → downloads a real .pptx file.
+> Upload a research paper → AI extracts key ideas → generates structured slides → downloads a real `.pptx` file.
 
-Why This Project?
+---
+
+## Why This Project?
 
 Academic research papers are:
 
-Dense and time-consuming to read
+- Dense and time-consuming to read  
+- Hard to summarize clearly  
+- Even harder to convert into good presentations  
 
-Hard to summarize clearly
+This project automates that entire workflow, helping **students, researchers, and professionals** quickly understand and present research without manual effort.
 
-Even harder to convert into good presentations
+---
 
-This project automates that entire workflow, helping students, researchers, and professionals quickly understand and present research without manual effort.
+## What the System Does
 
-What the System Does
+1. Accepts a **research paper PDF**
+2. Extracts and cleans text from the document
+3. Uses an LLM to identify:
+   - Problem statement
+   - Methodology
+   - Results
+   - Conclusions
+   - Limitations
+4. Converts each section into **presentation-ready bullet slides**
+5. Generates a **downloadable PowerPoint (.pptx)** file
 
-Accepts a research paper PDF
-
-Extracts and cleans text from the document
-
-Uses an LLM to identify:
-
-Problem statement
-
-Methodology
-
-Results
-
-Conclusions
-
-Limitations
-
-Converts each section into presentation-ready bullet slides
-
-Generates a downloadable PowerPoint (.pptx) file
-
-Architecture Overview
+---
+## Architecture Overview
 PDF Upload (Frontend)
-        ↓
+↓
 FastAPI Backend
-        ↓
+↓
 PDF Parsing
-        ↓
+↓
 LLM Semantic Extraction
-        ↓
+↓
 Slide Bullet Generation
-        ↓
+↓
 PowerPoint (.pptx) Creation
 
-Tech Stack
-Backend
 
-Python
+---
 
-FastAPI – API layer
+## 🧑‍💻 Tech Stack
 
-Ollama (Local LLMs) – LLaMA 3.1 / Mistral
+### Backend
+- Python
+- FastAPI
+- Ollama (Local LLMs – LLaMA 3.1 / Mistral)
+- LangChain
+- python-pptx
+- PyMuPDF / Unstructured
 
-LangChain – LLM orchestration
+### Frontend
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
 
-python-pptx – PowerPoint generation
+---
 
-PyMuPDF / Unstructured – PDF parsing
+## ✨ Key Features
 
-Frontend
+- 📄 Upload research PDFs
+- 🤖 Local LLM inference (no paid APIs)
+- 🧠 Multi-stage AI reasoning pipeline
+- 📊 Presentation-ready slide generation
+- 💾 One-click PowerPoint download
+- 🔐 Fully offline & privacy-friendly
 
-Next.js (App Router)
+---
 
-React
+## 📂 Project Structure
 
-TypeScript
 
-Tailwind CSS
 
-✨ Key Features
-
-📄 Upload research PDFs
-
-🤖 Local LLM inference (no paid APIs)
-
-🧠 Multi-stage AI reasoning pipeline
-
-📊 Presentation-ready slide generation
-
-💾 One-click PowerPoint download
-
-🔐 Fully offline & privacy-friendly
-
-📂 Project Structure
 paper2slides-ai/
 ├── backend/
-│   ├── main.py
-│   ├── pdf_parse.py
-│   ├── llm_extractor.py
-│   ├── slide_generator.py
-│   └── ppt_generator.py
+│ ├── main.py
+│ ├── pdf_parse.py
+│ ├── llm_extractor.py
+│ ├── slide_generator.py
+│ └── ppt_generator.py
 ├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── package.json
-│   └── tsconfig.json
+│ ├── app/
+│ ├── components/
+│ ├── package.json
+│ └── tsconfig.json
 ├── .gitignore
 └── README.md
 
-⚙️ How to Run Locally
-Prerequisites
 
-Python 3.10+
+---
 
-Node.js 18+
+## ⚙️ How to Run Locally
 
-Ollama installed and running
+### Prerequisites
 
-1️⃣ Start Ollama and pull a model
+- Python 3.10+
+- Node.js 18+
+- Ollama installed and running
+
+---
+
+### 1️⃣ Start Ollama and pull a model
+
+```bash
 ollama pull llama3.1:8b
 
 
-(or mistral:7b if preferred)
+(You can also use mistral:7b.)
 
-2️⃣ Backend setup
+2️⃣ Backend Setup
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 
-3️⃣ Frontend setup
+3️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
 
-4️⃣ Open the app
+4️⃣ Open the App
 
 Visit:
 
@@ -162,7 +158,7 @@ Handling real-world LLM inconsistencies
 
 Converting AI output into usable artifacts
 
-Future Improvements
+🔮 Future Improvements
 
 Speaker notes generation
 
@@ -174,12 +170,20 @@ Web-based slide previews (Reveal.js)
 
 Multi-paper comparison
 
-👤 Author
+Author
 
 Nahul Alaguraj
-AI / ML Enthusiast
+
 GitHub: https://github.com/Nahul-Alaguraj
 
 If you found this useful
 
 Give the repo a ⭐ — it really helps!
+
+
+
+
+
+
+## 🏗️ Architecture Overview
+
